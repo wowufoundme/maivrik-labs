@@ -158,19 +158,28 @@ body {
   flex-direction: row;
   align-items: center;
 }
-
-.card--1 {
-  background: url("../images/background.png") no-repeat right top;
-  background-size: cover;
-  background-attachment: fixed;
-}
-.card--1 .section-heading {
+.card .section-heading {
   font-size: 48px;
   width: 60%;
   padding: 100px 0 100px 100px;
   color: #ffffff;
   font-family: "Circular", "Helvetica", "Arial", sans-serif;
   font-weight: lighter;
+}
+
+.card--1 {
+  background: url("../images/wall-1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.card--2 {
+  background: url("../images/wall-2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.card--3 {
+  background: url("../images/wall-3.png") no-repeat center center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=app.css.map */

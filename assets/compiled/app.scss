@@ -127,13 +127,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.card--1 {
-    background: url('../images/background.png') no-repeat right top;
-    background-size: cover;
-    background-attachment: fixed;
-
     .section-heading {
         font-size: 48px;
         width: 60%;
@@ -142,4 +135,19 @@ body {
         font-family: $Circular-font-stack;
         font-weight: lighter;
     }
+}
+
+.card--1 {
+    background: url('../images/wall-1.png') no-repeat center center;
+    background-size: cover;
+}
+
+.card--2 {
+    background: url('../images/wall-2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.card--3 {
+    background: url('../images/wall-3.png') no-repeat center center;
+    background-size: cover;
 }
