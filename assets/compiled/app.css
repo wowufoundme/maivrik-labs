@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "tt_normslight";
+  src: url("../fonts/ttn-l.eot");
+  src: url("../fonts/ttn-l.eot?#iefix") format("embedded-opentype"), url("../fonts/ttn-l.woff2") format("woff2"), url("../fonts/ttn-l.woff") format("woff"), url("../fonts/ttn-l.ttf") format("truetype"), url("../fonts/ttn-l.svg#tt_normslight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "tt_normsmedium";
+  src: url("../fonts/ttn-m.eot");
+  src: url("../fonts/ttn-m.eot?#iefix") format("embedded-opentype"), url("../fonts/ttn-m.woff2") format("woff2"), url("../fonts/ttn-m.woff") format("woff"), url("../fonts/ttn-m.ttf") format("truetype"), url("../fonts/ttn-m.svg#tt_normsmedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "tt_normsregular";
+  src: url("../fonts/ttn-r.eot");
+  src: url("../fonts/ttn-r.eot?#iefix") format("embedded-opentype"), url("../fonts/ttn-r.woff2") format("woff2"), url("../fonts/ttn-r.woff") format("woff"), url("../fonts/ttn-r.ttf") format("truetype"), url("../fonts/ttn-r.svg#tt_normsregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "tt_normsthin";
+  src: url("../fonts/ttn-t.eot");
+  src: url("../fonts/ttn-t.eot?#iefix") format("embedded-opentype"), url("../fonts/ttn-t.woff2") format("woff2"), url("../fonts/ttn-t.woff") format("woff"), url("../fonts/ttn-t.ttf") format("truetype"), url("../fonts/ttn-t.svg#tt_normsthin") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/circularBook.eot");
+  src: url("../fonts/circularBook.eot?#iefix") format("embedded-opentype"), url("../fonts/circularBook.woff") format("woff"), url("../fonts/circularBook.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: "tt_normsregular", "Helvetica", "Arial", sans-serif;
+}
+
+.opaque-layer {
+  position: absolute;
+  z-index: 3;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.layer-hide {
+  display: none;
+}
+
+.layer-show {
+  display: block;
+}
+
+.nav {
+  z-index: 4;
+  position: fixed;
+  height: 100vh;
+  background: #333333;
+  width: 250px;
+  transform: translateX(-210px);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.nav .navigation {
+  list-style-type: none;
+  padding: 20px 0 0 20px;
+}
+.nav .navigation li {
+  margin-bottom: 0;
+  padding: 1rem;
+}
+.nav .navigation li a {
+  color: #9f9f9f;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.nav .navigation li a:hover {
+  color: #ffffff;
+}
+
+.hidden {
+  transform: translateX(-210px);
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.outer-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: inherit;
+  background-color: #000000;
+  z-index: 2;
+}
+
+.nav-toggle {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.bar-1, .bar-2, .bar-3, .bar-4 {
+  position: absolute;
+  height: 1px;
+  width: 22px;
+  background-color: #fff;
+  left: 8px;
+}
+
+.bar-1 {
+  top: 10px;
+}
+
+.bar-2 {
+  top: 16px;
+}
+
+.bar-3 {
+  top: 22px;
+}
+
+.bar-4 {
+  top: 28px;
+  width: 16px !important;
+}
+
+.main {
+  z-index: 1;
+  padding-left: 40px;
+}
+
+.card {
+  padding-left: 40px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card--1 {
+  background: url("../images/background.png") no-repeat right top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.card--1 .section-heading {
+  font-size: 48px;
+  width: 60%;
+  padding: 100px 0 100px 100px;
+  color: #ffffff;
+  font-family: "Circular", "Helvetica", "Arial", sans-serif;
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=app.css.map */
