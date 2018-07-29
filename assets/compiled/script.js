@@ -24,7 +24,7 @@ $(document).ready(function() {
        updateURL: false,
        loop: false,
        keyboard: true,
-       responsiveFallback: 0
+       responsiveFallback: 1
     });
 });
 
