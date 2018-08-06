@@ -11,18 +11,24 @@
 a,
 a:focus,
 a:hover {
-    color: #ffffff;
+    color: inherit;
     text-decoration: none;
 }
 
 body {
     font: normal 14px/200% $font-stack-regular;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body.about {
+    background-color: #efefef;
 }
 
 // Layer
 
 .opaque-layer {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     height: 100vh;
     width: 100vw;
@@ -43,6 +49,7 @@ body {
         color: #ffffff;    
         font-family: $Circular-font-stack;
     }
+    transition: display .5s linear;
 }
 
 .layer-hide {
@@ -71,34 +78,31 @@ body {
             font-family: $font-stack-regular;
             font-size: 1.6rem;
             font-weight: 100;
-            a {
-                color: #313234;
-                transition: all .2s cubic-bezier(.25,.46,.45,.94);
-                &:hover {
-                    .menu-item {
-                        &:before {
-                            transform: translateX(0);
-                        }
-                    }
-                }
-            }
         }
     }
 }
 
 .menu-item {
+    color: #313234;
     display: block;
     position: relative;
     &:before {
+        z-index: -1;
         content: '';
         position: absolute;
-        height: 1px;
-        width: 50%;
-        bottom: 50%;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
         left: 0;
         background-color: #000;
-        transition: transform .1s cubic-bezier(.25,.46,.45,.94);
-        transform: translateX(-105%);
+        transition: all .5s cubic-bezier(.25,.46,.45,.94);
+        transform: translateX(-110%);
+    }
+    &:hover {
+        &:before {
+            color: #313234;
+            transform: translateX(-5%);
+        }
     }
 }
 
@@ -191,9 +195,8 @@ body {
         font-size: 48px;
         line-height: 125%;
         width: 60%;
-        padding: 200px 0 20px 0px;
-        font-family: $Circular-font-stack;
-        font-weight: lighter;
+        padding: 100px 0 20px 0px;
+        font-family: $Avenir;
     }
     .section-content{
         background: rgba(0,0,0,0.6);
@@ -285,7 +288,7 @@ body {
     overflow: visible;
     z-index: 0;
     transform: translateX(0);
-    transition: all .5s cubic-bezier(.25,.46,.45,.94);
+    transition: all 1s cubic-bezier(.23,1,.32,1);
     &:before {
         content: '';
         position: absolute;
@@ -299,5 +302,148 @@ body {
         transform: translateX(-150%);
     }
 }
+
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 80px;
+    padding-top: 40px;
+}
+
+.about-section {
+    background: url(../images/neural-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.card-layer {
+    width: 88%;
+    background: rgba(0, 0, 0, 0.96);
+    padding: 40px 80px;
+    margin: 0 auto;
+    transform: translateY(0);
+}
+
+.card-layer:first-child {
+    margin-top: 35vh;
+}
+
+.card-layer:not(:first-child) {
+    margin-top: 50px;
+}
+
+.heading-xl {
+    color: #ededed;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.2rem;
+    margin: 50px 0;
+    font-family: $Didot; 
+    font-weight: 900;     
+    transition: all 835ms cubic-bezier(0.16, 0.01, 0.77, 1);
+    opacity: 0;
+    transform: translateX(-10%);
+}
+
+.heading-view-loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content-md {
+    color: #999999;
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-family: $font-stack-light;
+    transition: all 835ms cubic-bezier(0.16, 0.01, 0.77, 1);
+    opacity: 0;
+    transform: translateY(30%);
+    a {
+        position: relative;
+        transition: all 277ms cubic-bezier(0.16, 0.01, 0.77, 1);
+        &:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #555555;
+            bottom: 2px;
+            left: 0;
+            transition: all 277ms cubic-bezier(0.16, 0.01, 0.77, 1);
+        }
+        &:hover {
+            color: #fff;
+            &:before {
+                background: #fff;
+            }
+        }
+    }
+    .objectives-section {
+        ul {
+            li {
+                list-style-image: url('../images/li.svg');
+            }
+        }
+    }
+}   
+
+.content-view-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+// SVG 
+
+.svg-icon {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.rotate-infinite {
+    transform: rotateZ(0);
+    animation: rotate-infinite 5s linear infinite;  
+    transform-origin: center center;
+}
+
+.svg-size-sm {
+    height: 60px;
+    width: 60px;
+}
+
+.svg-size-md {
+    height: 100px;
+    width: 100px;
+}
+
+.svg-size-xl {
+    height: 124px;
+    width: 124px;
+}
+
+.svg-size-original {
+
+}
+
+@keyframes rotate-infinite {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.st0{fill:#EFEFEF;}
+.st1{fill:none;stroke:#19B5FE;stroke-width:15;stroke-miterlimit:10;}
+.st2{fill:none;stroke:#22A7F0;stroke-width:15;stroke-miterlimit:10;}
+.st3{fill:none;stroke:#044F67;stroke-width:15;stroke-miterlimit:10;}
+.st4{fill:none;stroke:#003171;stroke-width:15;stroke-miterlimit:10;}
 
 @import '_responsive';

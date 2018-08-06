@@ -52,4 +52,28 @@
             line-height: 200%;
         }
     }
+    .container {
+        padding-top: 0;
+        padding-left: 0;
+    }
+    .card-layer {
+        padding: 1px 60px;
+        width: 100%;
+    }
+    .card-layer:first-child {
+        margin-top: 0;
+    }
+    .card-layer:not(:first-child) {
+        margin-top: 0;
+    }
+    .heading-xl {
+        font-size: 42px;
+        line-height: 46px;
+        letter-spacing: -0.1rem;
+    }
+    .content-md {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 20px 0 80px 0;
+    }
 }
