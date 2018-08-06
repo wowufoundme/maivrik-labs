@@ -53,22 +53,22 @@
         }
     }
     .container {
-        padding-top: 0;
-        padding-left: 0;
+        padding-top: 10px;
+        padding-left: 50px;
     }
     .card-layer {
-        padding: 1px 60px;
+        padding: 1px 15px 1px 20px;
         width: 100%;
     }
     .card-layer:first-child {
         margin-top: 0;
     }
     .card-layer:not(:first-child) {
-        margin-top: 0;
+        margin-top: 10px;
     }
     .heading-xl {
         font-size: 42px;
-        line-height: 46px;
+        line-height: 50px;
         letter-spacing: -0.1rem;
     }
     .content-md {

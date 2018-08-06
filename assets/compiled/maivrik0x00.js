@@ -27,6 +27,5 @@ $("#home").on({mouseenter:function(){$(".nav").css("background-color","#2ecc71")
 */
 
 $(document).ready(function() {
-    $('div.heading').addClass('heading-view-loaded');
-    $('div.content').addClass('content-view-loaded');
+    $('.heading').addClass('heading-view-loaded');
 });
