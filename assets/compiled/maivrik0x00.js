@@ -4,8 +4,8 @@ var navShown = false
 $('#nav-toggle').click(function(){
     $('.nav').toggleClass('show');
     $('.opaque-layer').toggleClass('layer-show');
-    $('.bar-2').toggleClass('bar-open');
-    $('.bar-3').toggleClass('bar-open');
+    $('.bar-1').toggleClass('bar-1-open');
+    $('.bar-2').toggleClass('bar-2-open');
     if(navShown == false) {
         navShown = true
     }
@@ -18,6 +18,8 @@ $('.opaque-layer').click(function() {
     $('.opaque-layer').toggleClass('layer-show');
     if (navShown == true) {
         $('.nav').toggleClass('show');
+        $('.bar-1').toggleClass('bar-1-open');
+        $('.bar-2').toggleClass('bar-2-open');
         navShown = false
     }
 });

@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MAIVRIK</title>
     <link rel="stylesheet" href="assets/vendors/normalize.css">
     <link rel="stylesheet" href="assets/vendors/skeleton.css">
     <link rel="stylesheet" href="assets/compiled/app.css">
-
     <script src="assets/vendors/jquery.js"></script>
 </head>
 <body>
+    <div class="nav-toggle" id="nav-toggle">
+        <span class="bar-1"></span>
+        <span class="bar-2"></span>
+    </div>
     <div class="nav hide">
         <ul class="navigation">
             <a href="index.html" class="menu-item"><li id="home">Home</li></a>
@@ -22,24 +25,7 @@
             <a href="#" class="menu-item"><li id="team">Team</li></a>
             <a href="#" class="menu-item"><li id="contact">Contact</li></a>
         </ul>
-        <div class="outer-nav">
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar-1"></span>
-                <span class="bar-2"></span>
-                <span class="bar-3"></span>
-                <span class="bar-4"></span>
-            </div>
-            <div class="label">MAIVRIK</div>
-        </div>
     </div>
-    <div class="opaque-layer layer-hide">
-        <div class="float-label">
-            MAIVRIK
-            <br>
-            LABS
-        </div>
-    </div>
-
     <div class="container home-section">
          <div class="card-layer">
             <div class="heading heading-xl">
@@ -49,23 +35,57 @@
                 <br>
                 Solving real world problems through incisive 'Applied AI' and beta-testing 
             </div>
-            <div class="btn">
-                <a href="#" id="view-projects" class="btn-line-mark">View Projects // Explore</a>
+            <a href="#" class="btn">
+                <div id="view-projects" class="btn-line-mark">View Projects // Explore</div>
                 <span class="line"></span>
-            </div>
-            <div class="btn">
-                <a href="#" id="view-projects" class="btn-line-mark">Learn more about us</a>
+            </a>
+            <br>
+            <a href="#" class="btn">
+                <div id="view-projects" class="btn-line-mark">Learn more about us</div>
                 <span class="line"></span>
-            </div>
+            </a>
         </div>
         <div class="card-layer">
             <div class="heading heading-xl">
                     'Applied AI' for a myriad of academic fronts &amp; industry verticals  
             </div>
-            <div class="btn">
-                <a href="#" id="view-projects" class="btn-line-mark">Read more about our researches</a>
+            <a href="#" class="btn">
+                <div id="view-projects" class="btn-line-mark">Learn more about us</div>
                 <span class="line"></span>
+            </a>
+        </div>
+        <div class="card-layer">
+            <div class="container app-section">
+                <div class="row">
+                    <div class="four columns">
+                        <div class="app-section-title">Hardware</div>
+                        <div class="column-content-wrapper">
+                            The lab is equipped with the latest generation of NVIDIA GPUs based on the Pascal Architecture, i.e. GTX Titan X and GTX 1080 (funded by DIC,UIET,PU CHANDIGARH). At the moment there are 2 such multi-GPU machines with 6th and 7th generation Intel multicore i7 processors. The Lab is also seeking to acquire server-based hardware to extend the data crunching capabilities. Current system with GTX Titan rivals <a href="https://developer.nvidia.com/devbox" target="_blank">Nvidia DevBox</a>
+                        </div>
+                </div>
+                    <div class="four columns">
+                        <div class="app-section-title">Workstation</div>
+                        <div class="column-content-wrapper">
+                                In addition to dedicated hardware for conducting AI research, the lab has individual workstations for students and lab members to code or develop their solutions. Each Dell workstation is equipped with an i7 processor and windows/Ubuntu Linux for any kind of development/research work.
+                        </div>
+                    </div>
+                    <div class="four columns">
+                        <div class="app-section-title">Workspace</div>
+                        <div class="column-content-wrapper">
+                            The lab has ample seating capacity for more than 25 members, with spacious surroundings to conduct indoor experiments/ lectures. All the necessary open source and proprietary software is available on individual workstation. The dedicated server and workstation hardware is assembled in the server room adjoining the lab.
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="card-layer">
+            <div class="heading heading-xl">
+                    Shape your future project with our multifarious and versatile technical &amp; project management competencies in a range of engineering disciplines  
+            </div>
+            <a href="#" class="btn">
+                <div id="view-projects" class="btn-line-mark">Learn more about us</div>
+                <span class="line"></span>
+            </a>
         </div>
     </div>
     <!-- <div class="main">
